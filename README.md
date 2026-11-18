@@ -21,7 +21,7 @@ const CONFIG = {
 - **descriptor**: the gray line under the name, and the page's meta description.
 - **links**: rendered in order and numbered 01, 02, 03 automatically. Add, remove or reorder entries freely. `note` is the small uppercase text on the right.
 
-Links open in the same tab. Links to other sites get `rel="noopener"` automatically.
+Links to other sites open in a new tab (with `rel="noopener"`, added automatically). Internal links, `#` and `mailto:` links open in the same tab.
 
 **Also update the static tags in `<head>`.** Just below the script are `<title>`, `description`, `og:*` and `twitter:*` tags with the same name and descriptor. Link previews (iMessage, Slack, LinkedIn, X) don't run JavaScript, so they read these tags directly. Change them to match whenever you change `name` or `descriptor`.
 

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#links").append(...CONFIG.links.map((link, i) => {
     const a = el("a", "row");
     a.href = link.url;
-    if (/^https?:\/\//i.test(link.url) && new URL(link.url).host !== location.host) a.rel = "noopener";
+    if (/^https?:\/\//i.test(link.url) && new URL(link.url).host !== location.host) { a.target = "_blank"; a.rel = "noopener"; }
     const idx = el("span", "idx", String(i + 1).padStart(2, "0"));
     const arrow = el("span", "arrow", "→");
     idx.setAttribute("aria-hidden", "true");
