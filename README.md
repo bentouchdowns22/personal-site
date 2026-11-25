@@ -1,12 +1,12 @@
 # personal-site
 
-My personal site, live at [benjaminatkinson.me](https://benjaminatkinson.me). One `index.html`, no build step, no libraries. The only external request is IBM Plex from Google Fonts.
+My personal site, live at [benjaminatkinson.me](https://benjaminatkinson.me). One `index.html`, no build step, no libraries. The only external request is IBM Plex Mono from Google Fonts.
 
 ## Edit
 
-Everything you'd change is in the `CONFIG` block at the top of the script in `index.html`: `name`, `descriptor`, and the `links` list (`label`, `url`, `note`). Links are numbered automatically. Links to other sites open in a new tab.
+The text lives in `<p id="intro">` in `index.html`. On load, a few lines of JavaScript type it out one character at a time; links inside it (like Babson College) are kept. Without JavaScript, or with reduced motion turned on, the text shows in full.
 
-Also update the `<title>`, `description`, `og:*` and `twitter:*` tags in `<head>` to match. Link previews don't run JavaScript, so they read those tags instead of `CONFIG`.
+If you change the intro, also update the `description` and `og:description` tags in `<head>`, which link previews read.
 
 ## Preview
 
@@ -24,4 +24,4 @@ The site is served by GitHub Pages from the `minimal-site` branch. Push to that 
 git push origin minimal-site
 ```
 
-The custom domain is set in the `CNAME` file (keep it) and under Settings → Pages. DNS at the registrar points `benjaminatkinson.me` to GitHub Pages.
+The custom domain is set in the `CNAME` file (keep it) and under Settings → Pages.
